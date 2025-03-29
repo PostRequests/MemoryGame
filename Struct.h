@@ -59,6 +59,7 @@ struct Card {
 struct Board {
     Coordinate sPos;//Стартовая позиция поля
     Card* deck = nullptr;//Колода карт
+    int cards; //Всего карт в колоде
     int cDeck;//Количество активных карт, когда дойдет до 0, игра пройдена
     int oc = -1;//Номер открытой карты
     time_t st;//Время начала игры

@@ -27,5 +27,7 @@ void calculateCardLayout(int Cards, int& rows, int& cols);
 Board createBoard(int cards);
 //Рисует доску рубашками вверх
 void drawBackBoard(Board b);
+//Создает и запускает меню
 void playMenu();
+//Основная функция игры
 void playGame(Menu& menu);

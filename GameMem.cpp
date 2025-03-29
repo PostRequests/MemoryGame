@@ -88,6 +88,7 @@ Board createBoard(int cards) {
 	calculateCardLayout(cards, board.rows, board.cols);
 	board.sel = { 0,0 };
 	board.cDeck = cards;
+	board.cards = cards;
 	board.deck = getDeck(cards);
 	board.sPos = {CS.x / 2 - ((board.cols - 1) * (cWidth + 2)) / 2, cHeight + 3};
 	return board;
@@ -128,6 +129,8 @@ void playGame(Menu& menu) {
 			setCursorPosition(20, 12);
 			system("pause");
 			drawEmptyRectangle({ 20, 10 }, { 80, 13 });
+			delete[] bor.deck;
+			bor.deck = nullptr;
 			return;
 		}
 		setCursorPosition(20, 10);
